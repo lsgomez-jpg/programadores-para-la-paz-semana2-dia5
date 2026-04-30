@@ -10,29 +10,35 @@
 
   <main>
     <section class="contenedor">
-      <h1>Formulario Participa</h1>
+      <h1>Espacio de participación para la comunidad</h1>
 
       <p>
-        Este formulario permite recoger propuestas, ideas o necesidades de la comunidad.
-        La información será usada únicamente con fines de participación y organización comunitaria.
+        Este formulario sirve para que las personas puedan compartir sus ideas, propuestas o necesidades
+        con el objetivo de mejorar la comunicación y la participación dentro de la comunidad.
+        La información recolectada será utilizada de manera responsable, buscando generar
+        espacios de diálogo y colaboración entre los ciudadanos, promoviendo así una comunidad
+        más informada, organizada y participativa.
       </p>
 
-      <form>
+      <form action="#" method="post">
+
         <div class="campo">
-          <label for="nombre">Nombre</label>
+          <label for="nombre">Nombre del participante</label>
           <input 
             type="text" 
             id="nombre" 
             name="nombre" 
-            placeholder="Escribe tu nombre">
+            placeholder="Escribe tu nombre"
+            required>
         </div>
 
         <div class="campo">
-          <label for="propuesta">Propuesta o mensaje</label>
+          <label for="propuesta">Propuesta o mensaje para la comunidad</label>
           <textarea 
             id="propuesta" 
             name="propuesta" 
-            placeholder="Escribe tu propuesta para la comunidad"></textarea>
+            placeholder="Escribe tu propuesta para la comunidad"
+            required></textarea>
         </div>
 
         <div class="campo">
@@ -41,17 +47,18 @@
             type="text" 
             id="contacto" 
             name="contacto" 
-            placeholder="Este campo es opcional">
+            placeholder="Correo o teléfono (opcional)">
         </div>
 
-        <div class="campo">
-          <label>
-            <input type="checkbox" name="consentimiento">
-            Acepto que mi información sea usada únicamente para fines de participación comunitaria.
+        <div class="campo checkbox">
+          <input type="checkbox" id="consentimiento" name="consentimiento" required>
+          <label for="consentimiento">
+            Marca esta casilla si estás de acuerdo con el uso de tus datos para fines de participación comunitaria.
           </label>
         </div>
 
         <button type="submit">Enviar participación</button>
+
       </form>
     </section>
   </main>
